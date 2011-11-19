@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BA5F7C4147874A80095BC85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7C3147874A80095BC85 /* Cocoa.framework */; };
+		9BA5F7CE147874A80095BC85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7CC147874A80095BC85 /* InfoPlist.strings */; };
+		9BA5F7D0147874A80095BC85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7CF147874A80095BC85 /* main.m */; };
+		9BA5F7D4147874A80095BC85 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7D2147874A80095BC85 /* Credits.rtf */; };
+		9BA5F7D7147874A80095BC85 /* GOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7D6147874A80095BC85 /* GOAppDelegate.m */; };
+		9BA5F7DA147874A80095BC85 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7D8147874A80095BC85 /* MainMenu.xib */; };
+		9BA5F7E2147874A80095BC85 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */; };
+		9BA5F7E3147874A80095BC85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7C3147874A80095BC85 /* Cocoa.framework */; };
+		9BA5F7EB147874A80095BC85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7E9147874A80095BC85 /* InfoPlist.strings */; };
+		9BA5F7EE147874A80095BC85 /* LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* LifeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BA5F7E4147874A80095BC85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BA5F7B6147874A80095BC85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BA5F7BE147874A80095BC85;
+			remoteInfo = Life;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9BA5F7BF147874A80095BC85 /* Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Life.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA5F7C3147874A80095BC85 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9BA5F7C6147874A80095BC85 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9BA5F7C7147874A80095BC85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9BA5F7C8147874A80095BC85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9BA5F7CB147874A80095BC85 /* Life-Info.plist */ = {isa = PBXFileReference; path = "Life-Info.plist"; sourceTree = "<group>"; };
+		9BA5F7CD147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BA5F7CF147874A80095BC85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BA5F7D1147874A80095BC85 /* Life-Prefix.pch */ = {isa = PBXFileReference; path = "Life-Prefix.pch"; sourceTree = "<group>"; };
+		9BA5F7D3147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9BA5F7D5147874A80095BC85 /* GOAppDelegate.h */ = {isa = PBXFileReference; path = GOAppDelegate.h; sourceTree = "<group>"; };
+		9BA5F7D6147874A80095BC85 /* GOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOAppDelegate.m; sourceTree = "<group>"; };
+		9BA5F7D9147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9BA5F7E0147874A80095BC85 /* LifeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9BA5F7E8147874A80095BC85 /* LifeTests-Info.plist */ = {isa = PBXFileReference; path = "LifeTests-Info.plist"; sourceTree = "<group>"; };
+		9BA5F7EA147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BA5F7EC147874A80095BC85 /* LifeTests.h */ = {isa = PBXFileReference; path = LifeTests.h; sourceTree = "<group>"; };
+		9BA5F7ED147874A80095BC85 /* LifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BA5F7BC147874A80095BC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7C4147874A80095BC85 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA5F7DC147874A80095BC85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7E2147874A80095BC85 /* SenTestingKit.framework in Frameworks */,
+				9BA5F7E3147874A80095BC85 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BA5F7B4147874A80095BC85 = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7C9147874A80095BC85 /* Life */,
+				9BA5F7E6147874A80095BC85 /* LifeTests */,
+				9BA5F7C2147874A80095BC85 /* Frameworks */,
+				9BA5F7C0147874A80095BC85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BA5F7C0147874A80095BC85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7BF147874A80095BC85 /* Life.app */,
+				9BA5F7E0147874A80095BC85 /* LifeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BA5F7C2147874A80095BC85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7C3147874A80095BC85 /* Cocoa.framework */,
+				9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */,
+				9BA5F7C5147874A80095BC85 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BA5F7C5147874A80095BC85 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7C6147874A80095BC85 /* AppKit.framework */,
+				9BA5F7C7147874A80095BC85 /* CoreData.framework */,
+				9BA5F7C8147874A80095BC85 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9BA5F7C9147874A80095BC85 /* Life */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7D5147874A80095BC85 /* GOAppDelegate.h */,
+				9BA5F7D6147874A80095BC85 /* GOAppDelegate.m */,
+				9BA5F7D8147874A80095BC85 /* MainMenu.xib */,
+				9BA5F7CA147874A80095BC85 /* Supporting Files */,
+			);
+			path = Life;
+			sourceTree = "<group>";
+		};
+		9BA5F7CA147874A80095BC85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7CB147874A80095BC85 /* Life-Info.plist */,
+				9BA5F7CC147874A80095BC85 /* InfoPlist.strings */,
+				9BA5F7CF147874A80095BC85 /* main.m */,
+				9BA5F7D1147874A80095BC85 /* Life-Prefix.pch */,
+				9BA5F7D2147874A80095BC85 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BA5F7E6147874A80095BC85 /* LifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7EC147874A80095BC85 /* LifeTests.h */,
+				9BA5F7ED147874A80095BC85 /* LifeTests.m */,
+				9BA5F7E7147874A80095BC85 /* Supporting Files */,
+			);
+			path = LifeTests;
+			sourceTree = "<group>";
+		};
+		9BA5F7E7147874A80095BC85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BA5F7E8147874A80095BC85 /* LifeTests-Info.plist */,
+				9BA5F7E9147874A80095BC85 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BA5F7BE147874A80095BC85 /* Life */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA5F7F1147874A80095BC85 /* Build configuration list for PBXNativeTarget "Life" */;
+			buildPhases = (
+				9BA5F7BB147874A80095BC85 /* Sources */,
+				9BA5F7BC147874A80095BC85 /* Frameworks */,
+				9BA5F7BD147874A80095BC85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Life;
+			productName = Life;
+			productReference = 9BA5F7BF147874A80095BC85 /* Life.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BA5F7DF147874A80095BC85 /* LifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA5F7F4147874A80095BC85 /* Build configuration list for PBXNativeTarget "LifeTests" */;
+			buildPhases = (
+				9BA5F7DB147874A80095BC85 /* Sources */,
+				9BA5F7DC147874A80095BC85 /* Frameworks */,
+				9BA5F7DD147874A80095BC85 /* Resources */,
+				9BA5F7DE147874A80095BC85 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BA5F7E5147874A80095BC85 /* PBXTargetDependency */,
+			);
+			name = LifeTests;
+			productName = LifeTests;
+			productReference = 9BA5F7E0147874A80095BC85 /* LifeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BA5F7B6147874A80095BC85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "SNAP Interactive";
+			};
+			buildConfigurationList = 9BA5F7B9147874A80095BC85 /* Build configuration list for PBXProject "Life" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9BA5F7B4147874A80095BC85;
+			productRefGroup = 9BA5F7C0147874A80095BC85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BA5F7BE147874A80095BC85 /* Life */,
+				9BA5F7DF147874A80095BC85 /* LifeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BA5F7BD147874A80095BC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7CE147874A80095BC85 /* InfoPlist.strings in Resources */,
+				9BA5F7D4147874A80095BC85 /* Credits.rtf in Resources */,
+				9BA5F7DA147874A80095BC85 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA5F7DD147874A80095BC85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7EB147874A80095BC85 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9BA5F7DE147874A80095BC85 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BA5F7BB147874A80095BC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7D0147874A80095BC85 /* main.m in Sources */,
+				9BA5F7D7147874A80095BC85 /* GOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BA5F7DB147874A80095BC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA5F7EE147874A80095BC85 /* LifeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BA5F7E5147874A80095BC85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BA5F7BE147874A80095BC85 /* Life */;
+			targetProxy = 9BA5F7E4147874A80095BC85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BA5F7CC147874A80095BC85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BA5F7CD147874A80095BC85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BA5F7D2147874A80095BC85 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BA5F7D3147874A80095BC85 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9BA5F7D8147874A80095BC85 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BA5F7D9147874A80095BC85 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		9BA5F7E9147874A80095BC85 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BA5F7EA147874A80095BC85 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BA5F7EF147874A80095BC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9BA5F7F0147874A80095BC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9BA5F7F2147874A80095BC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Life/Life-Prefix.pch";
+				INFOPLIST_FILE = "Life/Life-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9BA5F7F3147874A80095BC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Life/Life-Prefix.pch";
+				INFOPLIST_FILE = "Life/Life-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9BA5F7F5147874A80095BC85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Life.app/Contents/MacOS/Life";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Life/Life-Prefix.pch";
+				INFOPLIST_FILE = "LifeTests/LifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9BA5F7F6147874A80095BC85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Life.app/Contents/MacOS/Life";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Life/Life-Prefix.pch";
+				INFOPLIST_FILE = "LifeTests/LifeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BA5F7B9147874A80095BC85 /* Build configuration list for PBXProject "Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA5F7EF147874A80095BC85 /* Debug */,
+				9BA5F7F0147874A80095BC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA5F7F1147874A80095BC85 /* Build configuration list for PBXNativeTarget "Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA5F7F2147874A80095BC85 /* Debug */,
+				9BA5F7F3147874A80095BC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9BA5F7F4147874A80095BC85 /* Build configuration list for PBXNativeTarget "LifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BA5F7F5147874A80095BC85 /* Debug */,
+				9BA5F7F6147874A80095BC85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BA5F7B6147874A80095BC85 /* Project object */;
+}
