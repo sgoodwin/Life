@@ -14,6 +14,7 @@
 
 @implementation GOWorldView
 @synthesize onColor = _onColor, offColor = _offColor;
+@synthesize width = _width, height = _height;
 @synthesize rows = _rows, columns = _columns;
 @synthesize delegate = _delegate;
 
@@ -26,7 +27,7 @@
     return _offColor;
 }
 
-- (NSColor*)onCOlor{
+- (NSColor*)onColor{
     if(_onColor){
         return _onColor;
     }
@@ -38,6 +39,8 @@
 - (void)reloadData{
     self.rows = [self.delegate rows];
     self.columns = [self.delegate columns];
+    self.width = self.bounds.size.width/(CGFloat)self.columns;
+    self.height = self.bounds.size.height/(CGFloat)self.rows;
     
     [self setNeedsDisplay:YES];
 }
@@ -51,14 +54,8 @@
 }
 
 - (void)drawBoxAtRow:(NSInteger)row andColumn:(NSInteger)column{
-    CGFloat width = self.bounds.size.width/(CGFloat)self.columns;
-    CGFloat height = self.bounds.size.height/(CGFloat)self.rows;
-    CGRect dirtyRect = CGRectMake(row*width, column*height, width, height);
-    
+    CGRect dirtyRect = CGRectMake(row*self.width, column*self.height, self.width, self.height);
     NSBezierPath *fullPath = [NSBezierPath bezierPathWithRect:dirtyRect];
-    [[NSColor whiteColor] set];
-    [fullPath fill];
-    
     if([self.delegate isCellLivingAtRow:row andColumn:column]){
         [self.onColor set];
     }else{
@@ -69,8 +66,8 @@
 
 - (void)mouseDown:(NSEvent *)theEvent {
     NSPoint point = [theEvent locationInWindow];
-    NSInteger row = (point.x/self.bounds.size.width)*[self rows];
-    NSInteger column = (point.y/self.bounds.size.height)*[self columns];
+    NSInteger row = floorf(point.x/self.width);
+    NSInteger column = floorf(point.y/self.height);
     [self.delegate toggleCellAtRow:row andColumn:column];
 }
 

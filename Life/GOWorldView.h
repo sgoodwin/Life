@@ -12,6 +12,8 @@
 @interface GOWorldView : NSView
 @property(assign) NSUInteger rows;
 @property(assign) NSUInteger columns;
+@property(assign) CGFloat width;
+@property(assign) CGFloat height;
 @property(nonatomic, strong) NSColor *onColor;
 @property(nonatomic, strong) NSColor *offColor;
 @property(weak) id<GOWorldViewDataSource> delegate;

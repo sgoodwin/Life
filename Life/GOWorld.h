@@ -12,6 +12,7 @@ typedef void (^WNCompletionBlock)();
 
 @interface GOWorld : NSObject
 @property(strong) NSMutableArray *cells;
+@property(assign) dispatch_queue_t queue;
 - (id)initWithRows:(NSInteger)rows columns:(NSInteger)columns;
 - (void)birthCellAtRow:(NSInteger)row andColumn:(NSInteger)column;
 - (void)killCellAtRow:(NSInteger)row andColumn:(NSInteger)column;

@@ -15,7 +15,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.world = [[GOWorld alloc] initWithRows:3 columns:3];
+    self.world = [[GOWorld alloc] initWithRows:10 columns:10];
     self.worldView.delegate = self;
     [self.worldView reloadData];
 }

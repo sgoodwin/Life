@@ -15,7 +15,7 @@
 @end
 
 @implementation GOWorld
-@synthesize cells = _cells;
+@synthesize cells = _cells, queue = _queue;
 
 - (id)initWithRows:(NSInteger)rows columns:(NSInteger)columns{
     self = [super init];
@@ -24,6 +24,7 @@
         for(NSUInteger i = 0;i<rows;i++){
             [_cells insertObject:[NSMutableArray emptyArrayWithLength:columns] atIndex:i];
         }
+        self.queue = dispatch_queue_create("com.goodwinlabs.steppingQueue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -93,8 +94,7 @@
 }
 
 - (void)stepWithCompletion:(WNCompletionBlock)block{
-    dispatch_queue_t queue = dispatch_queue_create("com.goodwinlabs.steppingQueue", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue, ^{
+    dispatch_async(self.queue, ^{
         for(NSUInteger rowNumber = 0;rowNumber < [self rows];rowNumber++){
             for(NSUInteger colNumber = 0;colNumber < [self columns];colNumber++){                
                 // Rule 1: Any cell with fewer than 2 live neighbors dies.
@@ -102,7 +102,7 @@
                 // Rule 3: Any live cell with more than 3 dies.
                 // Rule 4: Dead cells with exactly 3 live neighbors become alive.
                 NSArray *neighbors = [self neighborsAtRow:rowNumber andColumn:colNumber];
-                dispatch_async(queue, ^{
+                dispatch_async(self.queue, ^{
                     switch([neighbors count]){
                         case 0:
                             [self killCellAtRow:rowNumber andColumn:colNumber];
@@ -125,7 +125,7 @@
             }
         }
     });
-    dispatch_async(queue, ^{
+    dispatch_async(self.queue, ^{
         block();
     });
 }
