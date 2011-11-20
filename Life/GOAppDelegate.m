@@ -7,14 +7,49 @@
 //
 
 #import "GOAppDelegate.h"
+#import "GOWorld.h"
 
 @implementation GOAppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, world = _world, worldView = _worldView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.world = [[GOWorld alloc] initWithRows:3 columns:3];
+    self.worldView.delegate = self;
+    [self.worldView reloadData];
+}
+
+- (IBAction)step:(id)sender{
+    NSTimeInterval start = [[NSProcessInfo processInfo] systemUptime];
+    [self.world stepWithCompletion:^{
+        [self.worldView setNeedsDisplay:YES];
+        NSLog(@"took %f seconds to step.", [[NSProcessInfo processInfo] systemUptime]-start); 
+    }];
+}
+
+#pragma mark -
+#pragma mark GOWorldViewDataSource
+
+- (BOOL)isCellLivingAtRow:(NSUInteger)row andColumn:(NSUInteger)column{
+    return [self.world isCellLivingAtRow:row andColumn:column];
+}
+
+- (NSUInteger)rows{
+    return [self.world rows];
+}
+
+- (NSUInteger)columns{
+    return [self.world columns];
+}
+
+- (void)toggleCellAtRow:(NSUInteger)row andColumn:(NSUInteger)column{
+    if([self.world isCellLivingAtRow:row andColumn:column]){
+        [self.world killCellAtRow:row andColumn:column];
+    }else{
+        [self.world birthCellAtRow:row andColumn:column];
+    }
+    [self.worldView setNeedsDisplay:YES];
 }
 
 @end

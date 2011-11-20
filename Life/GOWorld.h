@@ -12,11 +12,11 @@ typedef void (^WNCompletionBlock)();
 
 @interface GOWorld : NSObject
 @property(strong) NSMutableArray *cells;
-- (id)initWithRows:(NSUInteger)rows columns:(NSUInteger)columns;
-- (void)birthCellAtRow:(NSUInteger)row andColumn:(NSUInteger)column;
-- (void)killCellAtRow:(NSUInteger)row andColumn:(NSUInteger)column;
+- (id)initWithRows:(NSInteger)rows columns:(NSInteger)columns;
+- (void)birthCellAtRow:(NSInteger)row andColumn:(NSInteger)column;
+- (void)killCellAtRow:(NSInteger)row andColumn:(NSInteger)column;
     
-- (BOOL)isCellLivingAtRow:(NSUInteger)row andColumn:(NSUInteger)column;
+- (BOOL)isCellLivingAtRow:(NSInteger)row andColumn:(NSInteger)column;
 - (CGFloat)rows;
 - (CGFloat)columns;
 

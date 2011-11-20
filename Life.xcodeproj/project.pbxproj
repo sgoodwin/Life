@@ -19,6 +19,7 @@
 		9BA5F7EE147874A80095BC85 /* WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* WorldTests.m */; };
 		9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7F814787AD80095BC85 /* GOWorld.m */; };
 		9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */; };
+		9BA5F7FF14789A010095BC85 /* GOWorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7FE14789A010095BC85 /* GOWorldView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		9BA5F7F814787AD80095BC85 /* GOWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOWorld.m; sourceTree = "<group>"; };
 		9BA5F7FA14787F950095BC85 /* NSArray+ArrayConveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ArrayConveniences.h"; sourceTree = "<group>"; };
 		9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayConveniences.m"; sourceTree = "<group>"; };
+		9BA5F7FD14789A010095BC85 /* GOWorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOWorldView.h; sourceTree = "<group>"; };
+		9BA5F7FE14789A010095BC85 /* GOWorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOWorldView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				9BA5F7F814787AD80095BC85 /* GOWorld.m */,
 				9BA5F7FA14787F950095BC85 /* NSArray+ArrayConveniences.h */,
 				9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */,
+				9BA5F7FD14789A010095BC85 /* GOWorldView.h */,
+				9BA5F7FE14789A010095BC85 /* GOWorldView.m */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				9BA5F7D7147874A80095BC85 /* GOAppDelegate.m in Sources */,
 				9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */,
 				9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */,
+				9BA5F7FF14789A010095BC85 /* GOWorldView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -91,8 +91,8 @@
     [self.world birthCellAtRow:0 andColumn:0];
     [self.world birthCellAtRow:0 andColumn:1];
     [self.world stepWithCompletion:^{
-        STAssertTrue([self.world isCellLivingAtRow:0 andColumn:0], @"Testing for dead cells");
-        STAssertTrue([self.world isCellLivingAtRow:0 andColumn:1], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:0 andColumn:0], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:0 andColumn:1], @"Testing for dead cells");
         STAssertFalse([self.world isCellLivingAtRow:0 andColumn:2], @"Testing for dead cells");
         STAssertFalse([self.world isCellLivingAtRow:1 andColumn:0], @"Testing for dead cells");
         STAssertFalse([self.world isCellLivingAtRow:1 andColumn:1], @"Testing for dead cells");
@@ -101,6 +101,25 @@
         STAssertFalse([self.world isCellLivingAtRow:2 andColumn:1], @"Testing for dead cells");
         STAssertFalse([self.world isCellLivingAtRow:2 andColumn:2], @"Testing for dead cells");
     }];
+}
+
+- (void)testRuleNumber3{
+    [self.world birthCellAtRow:0 andColumn:0];
+    [self.world birthCellAtRow:0 andColumn:1];
+    [self.world birthCellAtRow:1 andColumn:0];
+    [self.world birthCellAtRow:1 andColumn:1];
+    [self.world stepWithCompletion:^{
+        STAssertTrue([self.world isCellLivingAtRow:0 andColumn:0], @"Testing for dead cells");
+        STAssertTrue([self.world isCellLivingAtRow:0 andColumn:1], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:0 andColumn:2], @"Testing for dead cells");
+        STAssertTrue([self.world isCellLivingAtRow:1 andColumn:0], @"Testing for dead cells");
+        STAssertTrue([self.world isCellLivingAtRow:1 andColumn:1], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:1 andColumn:2], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:2 andColumn:0], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:2 andColumn:1], @"Testing for dead cells");
+        STAssertFalse([self.world isCellLivingAtRow:2 andColumn:2], @"Testing for dead cells");
+    }];
+
 }
 
 @end
