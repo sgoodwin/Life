@@ -7,68 +7,74 @@
 //
 
 #import "GOWorldView.h"
+#import "GOGridLayer.h"
 
 @interface GOWorldView()
-- (void)drawBoxAtRow:(NSInteger)row andColumn:(NSInteger)column;
+- (void)initialize;
 @end
 
 @implementation GOWorldView
-@synthesize onColor = _onColor, offColor = _offColor;
-@synthesize width = _width, height = _height;
 @synthesize rows = _rows, columns = _columns;
 @synthesize delegate = _delegate;
 
-- (NSColor*)offColor{
-    if(_offColor){
-        return _offColor;
+- (id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        [self initialize];
     }
-    
-    _offColor = [NSColor blackColor];
-    return _offColor;
+    return self;
 }
 
-- (NSColor*)onColor{
-    if(_onColor){
-        return _onColor;
+- (id)initWithFrame:(NSRect)frameRect{
+    self = [super initWithFrame:frameRect];
+    if(self){
+        [self initialize];
     }
-    
-    _onColor = [NSColor orangeColor];
-    return _onColor;
+    return self;
+}
+
+- (void)initialize{
+    [self setWantsLayer:YES];
+    self.layer = [[GOGridLayer alloc] init];
+    self.layer.frame = self.bounds;
 }
 
 - (void)reloadData{
-    self.rows = [self.delegate rows];
-    self.columns = [self.delegate columns];
-    self.width = self.bounds.size.width/(CGFloat)self.columns;
-    self.height = self.bounds.size.height/(CGFloat)self.rows;
-    
-    [self setNeedsDisplay:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSAssert(self.delegate, @"You gotta have a delegate!");
+        self.rows = [self.delegate rows];
+        self.columns = [self.delegate columns];
+        
+        GOGridLayer *layer = (GOGridLayer*)self.layer;
+        [layer setNumberOfRows:self.rows andColumns:self.columns];
+    });
 }
 
-- (void)drawRect:(NSRect)dirtyRect{
-    for(NSUInteger x = 0;x<self.rows;x++){
-        for(NSUInteger y = 0;y<self.columns;y++){
-            [self drawBoxAtRow:x andColumn:y];
+- (void)reloadInfo{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        GOGridLayer *layer = (GOGridLayer*)self.layer;
+        for(NSUInteger x = 0;x<self.rows;x++){
+            for(NSUInteger y = 0;y<self.columns;y++){
+                if([self.delegate isCellLivingAtRow:x andColumn:y]){
+                    [layer enableCellAtRow:x andColumn:y];
+                }else{
+                    [layer disableCellAtRow:x andColumn:y];
+                }
+            }
         }
-    }
+    });
 }
 
-- (void)drawBoxAtRow:(NSInteger)row andColumn:(NSInteger)column{
-    CGRect dirtyRect = CGRectMake(row*self.width, column*self.height, self.width, self.height);
-    NSBezierPath *fullPath = [NSBezierPath bezierPathWithRect:dirtyRect];
-    if([self.delegate isCellLivingAtRow:row andColumn:column]){
-        [self.onColor set];
-    }else{
-        [self.offColor set];
-    }
-    [fullPath fill];
-}
+//- (void)drawRect:(NSRect)dirtyRect{
+//    for(NSUInteger x = 0;x<self.rows;x++){
+//        for(NSUInteger y = 0;y<self.columns;y++){
+//            [self drawBoxAtRow:x andColumn:y];
+//        }
+//    }
+//}
 
-- (void)mouseDown:(NSEvent *)theEvent {
-    NSPoint point = [theEvent locationInWindow];
-    NSInteger row = floorf(point.x/self.width);
-    NSInteger column = floorf(point.y/self.height);
-    [self.delegate toggleCellAtRow:row andColumn:column];
-}
+//- (void)mouseDown:(NSEvent *)theEvent {
+//    [self.delegate toggleCellAtRow:0 andColumn:0];
+//}
 
 @end

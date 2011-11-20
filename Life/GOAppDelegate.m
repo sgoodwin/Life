@@ -15,16 +15,44 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.world = [[GOWorld alloc] initWithRows:10 columns:10];
+    self.world = [[GOWorld alloc] initWithRows:100 columns:100];
+    
+    // Basic oscillator/blinker
+    [self.world birthCellAtRow:10 andColumn:20];
+    [self.world birthCellAtRow:10 andColumn:21];
+    [self.world birthCellAtRow:10 andColumn:22];
+    
+    // Toad period
+    [self.world birthCellAtRow:30 andColumn:20];
+    [self.world birthCellAtRow:31 andColumn:20];
+    [self.world birthCellAtRow:32 andColumn:20];
+    [self.world birthCellAtRow:31 andColumn:21];
+    [self.world birthCellAtRow:32 andColumn:21];
+    [self.world birthCellAtRow:33 andColumn:21];
+    
+    // Beacon (I read this as Bacon on wikipedia, less excited when I realized it was beacon)
+    [self.world birthCellAtRow:30 andColumn:50];
+    [self.world birthCellAtRow:31 andColumn:50];
+    [self.world birthCellAtRow:30 andColumn:51];
+    [self.world birthCellAtRow:31 andColumn:51];
+    [self.world birthCellAtRow:32 andColumn:52];
+    [self.world birthCellAtRow:33 andColumn:52];
+    [self.world birthCellAtRow:32 andColumn:53];
+    [self.world birthCellAtRow:33 andColumn:53];
+    
     self.worldView.delegate = self;
     [self.worldView reloadData];
+    [self.worldView reloadInfo];
 }
 
 - (IBAction)step:(id)sender{
-    NSTimeInterval start = [[NSProcessInfo processInfo] systemUptime];
     [self.world stepWithCompletion:^{
-        [self.worldView setNeedsDisplay:YES];
-        NSLog(@"took %f seconds to step.", [[NSProcessInfo processInfo] systemUptime]-start); 
+        [self.worldView reloadInfo];
+        double delayInSeconds = 0.1;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self step:nil];
+        });
     }];
 }
 
@@ -49,7 +77,7 @@
     }else{
         [self.world birthCellAtRow:row andColumn:column];
     }
-    [self.worldView setNeedsDisplay:YES];
+    [self.worldView reloadInfo];
 }
 
 @end

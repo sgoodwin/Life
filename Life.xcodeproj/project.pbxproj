@@ -20,6 +20,8 @@
 		9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7F814787AD80095BC85 /* GOWorld.m */; };
 		9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */; };
 		9BA5F7FF14789A010095BC85 /* GOWorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7FE14789A010095BC85 /* GOWorldView.m */; };
+		9BA5F8061478CC580095BC85 /* GOGridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F8051478CC580095BC85 /* GOGridLayer.m */; };
+		9BA5F80E1478D0740095BC85 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F80D1478D0740095BC85 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayConveniences.m"; sourceTree = "<group>"; };
 		9BA5F7FD14789A010095BC85 /* GOWorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOWorldView.h; sourceTree = "<group>"; };
 		9BA5F7FE14789A010095BC85 /* GOWorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOWorldView.m; sourceTree = "<group>"; };
+		9BA5F8041478CC580095BC85 /* GOGridLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOGridLayer.h; sourceTree = "<group>"; };
+		9BA5F8051478CC580095BC85 /* GOGridLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOGridLayer.m; sourceTree = "<group>"; };
+		9BA5F80D1478D0740095BC85 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA5F80E1478D0740095BC85 /* QuartzCore.framework in Frameworks */,
 				9BA5F7C4147874A80095BC85 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +109,7 @@
 		9BA5F7C2147874A80095BC85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BA5F80D1478D0740095BC85 /* QuartzCore.framework */,
 				9BA5F7C3147874A80095BC85 /* Cocoa.framework */,
 				9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */,
 				9BA5F7C5147874A80095BC85 /* Other Frameworks */,
@@ -133,6 +140,8 @@
 				9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */,
 				9BA5F7FD14789A010095BC85 /* GOWorldView.h */,
 				9BA5F7FE14789A010095BC85 /* GOWorldView.m */,
+				9BA5F8041478CC580095BC85 /* GOGridLayer.h */,
+				9BA5F8051478CC580095BC85 /* GOGridLayer.m */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -281,6 +290,7 @@
 				9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */,
 				9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */,
 				9BA5F7FF14789A010095BC85 /* GOWorldView.m in Sources */,
+				9BA5F8061478CC580095BC85 /* GOGridLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +464,7 @@
 				9BA5F7F3147874A80095BC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BA5F7F4147874A80095BC85 /* Build configuration list for PBXNativeTarget "LifeTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +473,7 @@
 				9BA5F7F6147874A80095BC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
