@@ -16,7 +16,8 @@
 		9BA5F7E2147874A80095BC85 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */; };
 		9BA5F7E3147874A80095BC85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7C3147874A80095BC85 /* Cocoa.framework */; };
 		9BA5F7EB147874A80095BC85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7E9147874A80095BC85 /* InfoPlist.strings */; };
-		9BA5F7EE147874A80095BC85 /* LifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* LifeTests.m */; };
+		9BA5F7EE147874A80095BC85 /* CellsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* CellsTests.m */; };
+		9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7F814787AD80095BC85 /* GOWorld.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +36,22 @@
 		9BA5F7C6147874A80095BC85 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9BA5F7C7147874A80095BC85 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9BA5F7C8147874A80095BC85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9BA5F7CB147874A80095BC85 /* Life-Info.plist */ = {isa = PBXFileReference; path = "Life-Info.plist"; sourceTree = "<group>"; };
+		9BA5F7CB147874A80095BC85 /* Life-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Life-Info.plist"; sourceTree = "<group>"; };
 		9BA5F7CD147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BA5F7CF147874A80095BC85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9BA5F7D1147874A80095BC85 /* Life-Prefix.pch */ = {isa = PBXFileReference; path = "Life-Prefix.pch"; sourceTree = "<group>"; };
+		9BA5F7D1147874A80095BC85 /* Life-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life-Prefix.pch"; sourceTree = "<group>"; };
 		9BA5F7D3147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9BA5F7D5147874A80095BC85 /* GOAppDelegate.h */ = {isa = PBXFileReference; path = GOAppDelegate.h; sourceTree = "<group>"; };
+		9BA5F7D5147874A80095BC85 /* GOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOAppDelegate.h; sourceTree = "<group>"; };
 		9BA5F7D6147874A80095BC85 /* GOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOAppDelegate.m; sourceTree = "<group>"; };
 		9BA5F7D9147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9BA5F7E0147874A80095BC85 /* LifeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9BA5F7E8147874A80095BC85 /* LifeTests-Info.plist */ = {isa = PBXFileReference; path = "LifeTests-Info.plist"; sourceTree = "<group>"; };
+		9BA5F7E8147874A80095BC85 /* LifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifeTests-Info.plist"; sourceTree = "<group>"; };
 		9BA5F7EA147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BA5F7EC147874A80095BC85 /* LifeTests.h */ = {isa = PBXFileReference; path = LifeTests.h; sourceTree = "<group>"; };
-		9BA5F7ED147874A80095BC85 /* LifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeTests.m; sourceTree = "<group>"; };
+		9BA5F7EC147874A80095BC85 /* CellsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellsTests.h; sourceTree = "<group>"; };
+		9BA5F7ED147874A80095BC85 /* CellsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellsTests.m; sourceTree = "<group>"; };
+		9BA5F7F714787AD80095BC85 /* GOWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOWorld.h; sourceTree = "<group>"; };
+		9BA5F7F814787AD80095BC85 /* GOWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOWorld.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				9BA5F7D6147874A80095BC85 /* GOAppDelegate.m */,
 				9BA5F7D8147874A80095BC85 /* MainMenu.xib */,
 				9BA5F7CA147874A80095BC85 /* Supporting Files */,
+				9BA5F7F714787AD80095BC85 /* GOWorld.h */,
+				9BA5F7F814787AD80095BC85 /* GOWorld.m */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -137,8 +142,8 @@
 		9BA5F7E6147874A80095BC85 /* LifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BA5F7EC147874A80095BC85 /* LifeTests.h */,
-				9BA5F7ED147874A80095BC85 /* LifeTests.m */,
+				9BA5F7EC147874A80095BC85 /* CellsTests.h */,
+				9BA5F7ED147874A80095BC85 /* CellsTests.m */,
 				9BA5F7E7147874A80095BC85 /* Supporting Files */,
 			);
 			path = LifeTests;
@@ -263,6 +268,7 @@
 			files = (
 				9BA5F7D0147874A80095BC85 /* main.m in Sources */,
 				9BA5F7D7147874A80095BC85 /* GOAppDelegate.m in Sources */,
+				9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA5F7EE147874A80095BC85 /* LifeTests.m in Sources */,
+				9BA5F7EE147874A80095BC85 /* CellsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,16 @@
 //  Copyright (c) 2011 SNAP Interactive. All rights reserved.
 //
 
-#import "LifeTests.h"
+#import "CellsTests.h"
+#import "GOWorld.h"
 
-@implementation LifeTests
+@implementation CellsTests
+@synthesize world = _world;
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    self.world = [[GOWorld alloc] initWithSize:CGSizeMake(3.0f, 3.0f)];
 }
 
 - (void)tearDown
@@ -22,11 +23,7 @@
     // Tear-down code here.
     
     [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in LifeTests");
+    self.world = nil;
 }
 
 @end
