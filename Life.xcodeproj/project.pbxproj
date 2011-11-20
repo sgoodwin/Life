@@ -16,8 +16,9 @@
 		9BA5F7E2147874A80095BC85 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */; };
 		9BA5F7E3147874A80095BC85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA5F7C3147874A80095BC85 /* Cocoa.framework */; };
 		9BA5F7EB147874A80095BC85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BA5F7E9147874A80095BC85 /* InfoPlist.strings */; };
-		9BA5F7EE147874A80095BC85 /* CellsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* CellsTests.m */; };
+		9BA5F7EE147874A80095BC85 /* WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7ED147874A80095BC85 /* WorldTests.m */; };
 		9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7F814787AD80095BC85 /* GOWorld.m */; };
+		9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +49,12 @@
 		9BA5F7E1147874A80095BC85 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9BA5F7E8147874A80095BC85 /* LifeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifeTests-Info.plist"; sourceTree = "<group>"; };
 		9BA5F7EA147874A80095BC85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BA5F7EC147874A80095BC85 /* CellsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellsTests.h; sourceTree = "<group>"; };
-		9BA5F7ED147874A80095BC85 /* CellsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellsTests.m; sourceTree = "<group>"; };
+		9BA5F7EC147874A80095BC85 /* WorldTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldTests.h; sourceTree = "<group>"; };
+		9BA5F7ED147874A80095BC85 /* WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldTests.m; sourceTree = "<group>"; };
 		9BA5F7F714787AD80095BC85 /* GOWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOWorld.h; sourceTree = "<group>"; };
 		9BA5F7F814787AD80095BC85 /* GOWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOWorld.m; sourceTree = "<group>"; };
+		9BA5F7FA14787F950095BC85 /* NSArray+ArrayConveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ArrayConveniences.h"; sourceTree = "<group>"; };
+		9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayConveniences.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				9BA5F7CA147874A80095BC85 /* Supporting Files */,
 				9BA5F7F714787AD80095BC85 /* GOWorld.h */,
 				9BA5F7F814787AD80095BC85 /* GOWorld.m */,
+				9BA5F7FA14787F950095BC85 /* NSArray+ArrayConveniences.h */,
+				9BA5F7FB14787F950095BC85 /* NSArray+ArrayConveniences.m */,
 			);
 			path = Life;
 			sourceTree = "<group>";
@@ -142,8 +147,8 @@
 		9BA5F7E6147874A80095BC85 /* LifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BA5F7EC147874A80095BC85 /* CellsTests.h */,
-				9BA5F7ED147874A80095BC85 /* CellsTests.m */,
+				9BA5F7EC147874A80095BC85 /* WorldTests.h */,
+				9BA5F7ED147874A80095BC85 /* WorldTests.m */,
 				9BA5F7E7147874A80095BC85 /* Supporting Files */,
 			);
 			path = LifeTests;
@@ -269,6 +274,7 @@
 				9BA5F7D0147874A80095BC85 /* main.m in Sources */,
 				9BA5F7D7147874A80095BC85 /* GOAppDelegate.m in Sources */,
 				9BA5F7F914787AD80095BC85 /* GOWorld.m in Sources */,
+				9BA5F7FC14787F950095BC85 /* NSArray+ArrayConveniences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA5F7EE147874A80095BC85 /* CellsTests.m in Sources */,
+				9BA5F7EE147874A80095BC85 /* WorldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

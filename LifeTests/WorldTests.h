@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 @class GOWorld;
-@interface CellsTests : SenTestCase
+@interface WorldTests : SenTestCase
 @property(strong) GOWorld *world;
 @end
