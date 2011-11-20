@@ -70,19 +70,16 @@
                     switch([neighbors count]){
                         case 0:
                         case 1:
-                            NSLog(@"Killing cell at (%lu, %lu) because it has %lu neighbors", rowNumber, colNumber, [neighbors count]);
                             [self killCellAtRow:rowNumber andColumn:colNumber];
                             break;
                         case 2:
                             break;
                         case 3:
                             if([self isCellLivingAtRow:rowNumber andColumn:colNumber]){
-                                NSLog(@"Birthing cell at (%lu, %lu) because it was dead and has %lu neighbors", rowNumber, colNumber, [neighbors count]);
                                 [self birthCellAtRow:rowNumber andColumn:colNumber];
                             }
                             break;
                         default:
-                            NSLog(@"Killing cell at (%lu, %lu) because it has %lu neighbors", rowNumber, colNumber, [neighbors count]);
                             [self killCellAtRow:rowNumber andColumn:colNumber];
                             break;
                     }
