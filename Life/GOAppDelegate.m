@@ -40,6 +40,14 @@
     [self.world birthCellAtRow:32 andColumn:53];
     [self.world birthCellAtRow:33 andColumn:53];
     
+    // A glider!
+    [self.world birthCellAtRow:60 andColumn:97];
+    [self.world birthCellAtRow:61 andColumn:97];
+    [self.world birthCellAtRow:62 andColumn:97];
+    [self.world birthCellAtRow:62 andColumn:98];
+    [self.world birthCellAtRow:61 andColumn:99];
+    
+    
     self.worldView.delegate = self;
     [self.worldView reloadData];
     [self.worldView reloadInfo];
